@@ -1,98 +1,284 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vlad Lingurariu | Senior Supply Chain Director</title>
-    <style>
-        :root {
-            --bg-color: #0a0f16;
-            --text-main: #e2e8f0;
-            --text-muted: #94a3b8;
-            --accent: #38bdf8;
-            --container-bg: #1e293b;
+    <title>EvoChain | End-to-End Supply Chain Architecture</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        evo: {
+                            900: '#0f172a', // Deep slate background
+                            800: '#1e293b', // Card background
+                            accent: '#38bdf8' // Tech blue accent
+                        }
+                    },
+                    animation: {
+                        // Adjusted from 40s to 80s for a 50% slower scroll velocity
+                        'marquee': 'marquee 80s linear infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        }
+                    }
+                }
+            }
         }
-        body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            padding: 4rem 2rem;
-            text-align: center;
-            border-bottom: 1px solid #334155;
-        }
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-        }
-        h2 {
-            color: var(--accent);
-            font-weight: 400;
-            font-size: 1.5rem;
-            margin-top: 0;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        .section-card {
-            background: var(--container-bg);
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            border: 1px solid #334155;
-        }
-        .evochain-badge {
-            display: inline-block;
-            background: rgba(56, 189, 248, 0.1);
-            color: var(--accent);
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-        a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
+    </script>
 
-    <header>
-        <h1>Vlad Lingurariu</h1>
-        <h2>Senior Supply Chain Director</h2>
-        <p>Post-M&A Integration | Advanced Analytics | Global S&OP</p>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="bg-evo-900 text-slate-300 font-sans antialiased overflow-x-hidden" x-data="{ mobileMenuOpen: false }">
+
+    <header class="fixed top-0 w-full z-50 bg-evo-900/80 backdrop-blur-md border-b border-slate-800 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <i class="ph-fill ph-hexagon text-evo-accent text-3xl"></i>
+                    <span class="text-white font-bold text-2xl tracking-tight">EvoChain</span>
+                </div>
+
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="https://app.evochain.pro" target="_blank" class="text-sm font-medium text-slate-300 hover:text-white transition-colors flex items-center gap-2">
+                        <i class="ph ph-cpu text-lg"></i>
+                        EvoChain App
+                    </a>
+                    <a href="mailto:contact@evochain.pro" class="bg-white text-evo-900 px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-slate-200 transition-colors shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+                        Contact Firm
+                    </a>
+                </nav>
+
+                <div class="md:hidden flex items-center">
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-slate-300 hover:text-white focus:outline-none">
+                        <i class="ph" :class="mobileMenuOpen ? 'ph-x' : 'ph-list'" style="font-size: 1.5rem;"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-evo-800 border-b border-slate-700">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="https://app.evochain.pro" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700">EvoChain App</a>
+                <a href="mailto:contact@evochain.pro" class="block px-3 py-2 rounded-md text-base font-medium text-evo-accent hover:text-white hover:bg-slate-700">Contact Firm</a>
+            </div>
+        </div>
     </header>
 
-    <div class="container">
-        <div class="section-card">
-            <div class="evochain-badge">Powered by the EvoChain Methodology</div>
-            <h3>Executive Summary</h3>
-            <p>Work in progress.</p>
-        </div>
+    <main class="pt-32 pb-16 sm:pt-40 sm:pb-24 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+                
+                <div class="lg:col-span-6 text-center lg:text-left" data-aos="fade-right" data-aos-duration="800">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-xs font-medium text-evo-accent mb-6">
+                        <span class="w-2 h-2 rounded-full bg-evo-accent animate-pulse"></span>
+                        Proprietary Data-Science & Planning Architecture
+                    </div>
+                    <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl lg:leading-tight">
+                        Architecting Resilient <br class="hidden lg:block">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-500">Supply Chains.</span>
+                    </h1>
+                    <p class="mt-6 text-base text-slate-400 sm:text-lg md:text-xl max-w-3xl mx-auto lg:mx-0">
+                        Leveraging two decades of global operational expertise to optimize network design, RCCP, and inventory management. Designed exclusively for data-rich enterprise environments requiring measurable ROI.
+                    </p>
+                </div>
 
-        <div class="section-card">
-            <h3>Proven Business Impact</h3>
-            <p>Work in progress.</p>
+                <div class="mt-16 lg:mt-0 lg:col-span-6" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <div class="relative rounded-xl bg-evo-800 border border-slate-700 shadow-2xl overflow-hidden aspect-video flex items-center justify-center group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-slate-800 to-evo-900 opacity-50"></div>
+                        <div class="absolute inset-0" style="background-image: radial-gradient(#334155 1px, transparent 1px); background-size: 20px 20px; opacity: 0.2;"></div>
+                        
+                        <div class="relative z-10 flex flex-col items-center gap-4 transition-transform duration-500 hover:scale-105">
+                            <i class="ph-fill ph-hexagon text-evo-accent text-7xl drop-shadow-[0_0_15px_rgba(56,189,248,0.3)]"></i>
+                            <span class="text-sm font-mono tracking-widest uppercase text-white font-semibold bg-evo-900/80 px-4 py-1.5 rounded border border-slate-700">Website Under Construction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </main>
 
-        <div class="section-card">
-            <h3>Contact & Connect</h3>
-            <p>Ready to drive supply chain transformation at scale.</p>
-            <p>Email: <a href="mailto:vlad.lingurariu@gmail.com">vlad.lingurariu@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/vladlingurariu" target="_blank">linkedin.com/in/vladlingurariu</a></p>
+    <section class="py-16 bg-slate-900 border-y border-slate-800 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-white tracking-tight">Projected Enterprise Impact</h2>
+                <p class="mt-4 text-slate-400 max-w-2xl mx-auto">Verified architectural benchmarks established through end-to-end integration and systemic optimization.</p>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="bg-evo-800 border border-slate-700 p-6 rounded-lg text-center shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl font-extrabold text-white mb-2">-30%</div>
+                    <div class="text-sm font-medium text-slate-400">Inventory Reduction</div>
+                </div>
+                <div class="bg-evo-800 border border-slate-700 p-6 rounded-lg text-center shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl font-extrabold text-white mb-2">+20%</div>
+                    <div class="text-sm font-medium text-slate-400">Forecast Accuracy</div>
+                </div>
+                <div class="bg-evo-800 border border-slate-700 p-6 rounded-lg text-center shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl font-extrabold text-white mb-2">+15%</div>
+                    <div class="text-sm font-medium text-slate-400">Service Level / Fill Rate</div>
+                </div>
+                <div class="bg-evo-800 border border-slate-700 p-6 rounded-lg text-center shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-4xl font-extrabold text-white mb-2">-20%</div>
+                    <div class="text-sm font-medium text-slate-400">Logistic Cost Reduction</div>
+                </div>
+                <div class="col-span-2 lg:col-span-1 bg-evo-accent/10 border border-evo-accent/30 p-6 rounded-lg text-center shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                    <div class="text-4xl font-extrabold text-evo-accent mb-2">+++</div>
+                    <div class="text-sm font-medium text-evo-accent">E2E Collaboration Improvement</div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
+    <section class="py-20 overflow-hidden bg-evo-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+            <h2 class="text-2xl font-bold text-white tracking-tight" data-aos="fade-right">Core Methodologies & Architecture</h2>
+        </div>
+        
+        <div class="relative flex overflow-x-hidden group">
+            <div class="py-4 animate-marquee whitespace-nowrap flex items-center gap-10">
+                <span class="text-xl font-medium text-slate-400 flex items-center px-4"><i class="ph-duotone ph-share-network text-3xl text-evo-accent mr-3"></i>Supply Chain Network Design</span>
+                <span class="text-xl font-medium text-slate-400 flex items-center px-4"><i class="ph-duotone ph-chart-line-up text-3xl text-evo-accent mr-3"></i>Power BI Reporting</span>
+                <span class="text-xl font-medium text-slate-400 flex items-center px-4"><i class="ph-duotone ph-users-three text-3xl text-evo-accent mr-3"></i>CRM Integration</span>
+                <span class="text-xl font-medium text-slate-400 flex items-center px-4"><i class="ph-duotone ph-trend-up text-3xl text-evo-accent mr-3"></i>Demand Forecasting</span>
+                <span class="text-xl font-medium text-slate-400 flex items-center px-4"><i class="ph-duotone ph-arrows-left-right text-3xl text-evo-accent mr-3"></i>Collaborative Planning (CPFR)</span>
+                <span class="text-xl font-medium text-slate-400 flex items-center px-4"><i class="ph-duotone ph-stack text-3xl text-evo-accent mr-3"></i>Inventory Management</span>
+                <span class="text-xl font-medium text-slate-400 flex items-center px-4"><i class="ph-duotone ph-forklift text-3xl text-evo-accent mr-3"></i>Intra-DC Dispatching</span>
+                <span class="text-xl font-medium text-slate-400 flex items-center px-4"><i class="ph-duotone ph-arrows-clockwise text-3xl text-evo-accent mr-3"></i>Replenishment Logic</span>
+                <span class="text-xl font-medium text-slate-400 flex items-center px-4"><i class="ph-duotone ph-factory text-3xl text-evo-accent mr-3"></i>Capacity Planning (RCCP)</span>
+                
+                <span class="text-xl font-medium text-slate-400 flex items-center px-4"><i class="ph-duotone ph-share-network text-3xl text-evo-accent mr-3"></i>Supply Chain Network Design</span>
+                <span class="text-xl font-medium text-slate-400 flex items-center px-4"><i class="ph-duotone ph-chart-line-up text-3xl text-evo-accent mr-3"></i>Power BI Reporting</span>
+                <span class="text-xl font-medium text-slate-400 flex items-center px-4"><i class="ph-duotone ph-users-three text-3xl text-evo-accent mr-3"></i>CRM Integration</span>
+                <span class="text-xl font-medium text-slate-400 flex items-center px-4"><i class="ph-duotone ph-trend-up text-3xl text-evo-accent mr-3"></i>Demand Forecasting</span>
+                <span class="text-xl font-medium text-slate-400 flex items-center px-4"><i class="ph-duotone ph-arrows-left-right text-3xl text-evo-accent mr-3"></i>Collaborative Planning (CPFR)</span>
+                <span class="text-xl font-medium text-slate-400 flex items-center px-4"><i class="ph-duotone ph-stack text-3xl text-evo-accent mr-3"></i>Inventory Management</span>
+                <span class="text-xl font-medium text-slate-400 flex items-center px-4"><i class="ph-duotone ph-forklift text-3xl text-evo-accent mr-3"></i>Intra-DC Dispatching</span>
+                <span class="text-xl font-medium text-slate-400 flex items-center px-4"><i class="ph-duotone ph-arrows-clockwise text-3xl text-evo-accent mr-3"></i>Replenishment Logic</span>
+                <span class="text-xl font-medium text-slate-400 flex items-center px-4"><i class="ph-duotone ph-factory text-3xl text-evo-accent mr-3"></i>Capacity Planning (RCCP)</span>
+            </div>
+            
+            <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-evo-900 to-transparent pointer-events-none"></div>
+            <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-evo-900 to-transparent pointer-events-none"></div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-evo-800/30 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-12" data-aos="fade-up">
+                <div>
+                    <h2 class="text-3xl font-bold text-white tracking-tight">Architectural Deployments</h2>
+                    <p class="mt-4 text-slate-400 max-w-2xl">Examining ROI and structural efficiency across complex global supply networks.</p>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#" class="text-sm font-semibold text-white hover:text-evo-accent transition-colors">View All Deployments &rarr;</a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <div class="aspect-[4/3] rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center mb-6 group-hover:border-slate-500 transition-colors">
+                        <i class="ph ph-image text-4xl text-slate-600"></i>
+                    </div>
+                    <div class="text-xs font-mono text-evo-accent mb-2">CASE STUDY 01</div>
+                    <h3 class="text-lg font-semibold text-white group-hover:text-slate-300 transition-colors">[Title Placeholder: Enterprise Network Optimization]</h3>
+                </div>
+
+                <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                    <div class="aspect-[4/3] rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center mb-6 group-hover:border-slate-500 transition-colors">
+                        <i class="ph ph-image text-4xl text-slate-600"></i>
+                    </div>
+                    <div class="text-xs font-mono text-evo-accent mb-2">CASE STUDY 02</div>
+                    <h3 class="text-lg font-semibold text-white group-hover:text-slate-300 transition-colors">[Title Placeholder: High-End Power BI Reporting Suite]</h3>
+                </div>
+
+                <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+                    <div class="aspect-[4/3] rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center mb-6 group-hover:border-slate-500 transition-colors">
+                        <i class="ph ph-image text-4xl text-slate-600"></i>
+                    </div>
+                    <div class="text-xs font-mono text-evo-accent mb-2">CASE STUDY 03</div>
+                    <h3 class="text-lg font-semibold text-white group-hover:text-slate-300 transition-colors">[Title Placeholder: CPFR Implementation Blueprint]</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-evo-900 border-t border-slate-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="ph-fill ph-hexagon text-evo-accent text-2xl"></i>
+                        <span class="text-white font-bold text-xl tracking-tight">EvoChain</span>
+                    </div>
+                    <p class="text-sm text-slate-500 leading-relaxed">
+                        Data-driven supply chain consulting and proprietary planning architecture for the modern enterprise.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Platform</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="https://app.evochain.pro" target="_blank" class="hover:text-white transition-colors">EvoChain App</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Methodology</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">System Status</a></li> 
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="mailto:contact@evochain.pro" class="hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">LinkedIn</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Cookie Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-slate-600">
+                    &copy; <script>document.write(new Date().getFullYear())</script> EvoChain Consulting. All rights reserved.
+                </p>
+                <div class="flex items-center gap-2 text-xs text-slate-600">
+                    <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                    Systems Operational
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 600,
+            easing: 'ease-out-cubic',
+        });
+    </script>
 </body>
 </html>
