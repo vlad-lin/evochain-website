@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | EvoChain Consulting</title>
+
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QX11J9ZKQB"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+    });
+    
+    gtag('js', new Date());
+
+    gtag('config', 'G-QX11J9ZKQB', {
+        'cookie_domain': 'evochain.pro',
+        'cookie_flags': 'SameSite=None;Secure'
+    });
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        evo: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            accent: '#F19E39'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="bg-slate-50 text-slate-600 font-sans antialiased overflow-x-hidden" x-data="{ mobileMenuOpen: false }">
+
+    <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all shadow-sm">
+        <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex flex-shrink-0 items-center gap-4 cursor-pointer">
+                    <a href="/" class="flex items-center gap-3 group">
+                        <img src="assets/Evochain_logo.png" alt="EvoChain Logo" class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                    </a>
+                </div>
+
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="about.html" class="text-sm font-medium text-slate-600 hover:text-evo-accent transition-colors">
+                        About Us
+                    </a>
+                    <a href="https://app.evochain.pro" target="_blank" class="text-sm font-medium text-slate-600 hover:text-evo-accent transition-colors flex items-center gap-2 group">
+                        <span class="material-symbols-rounded text-lg text-slate-400 group-hover:text-evo-accent transition-colors">developer_board</span>
+                        EvoChain App Login
+                    </a>
+                    <a href="contact.html" class="bg-evo-900 text-white px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-evo-800 transition-colors shadow-md">
+                        Contact Us
+                    </a>
+                </nav>
+
+                <div class="md:hidden flex items-center">
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-slate-600 hover:text-slate-900 focus:outline-none">
+                        <span class="material-symbols-rounded text-3xl" x-text="mobileMenuOpen ? 'close' : 'menu'"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white border-b border-slate-200 shadow-lg">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <span class="block px-3 py-1 mb-2 text-[10px] font-mono tracking-widest uppercase text-evo-accent font-semibold bg-orange-50 rounded border border-evo-accent/30 w-fit">
+                    Under Construction
+                </span>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50">About Us</a>
+                <a href="https://app.evochain.pro" target="_blank" class="flex items-center gap-2 px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50">
+                    <span class="material-symbols-rounded text-lg">developer_board</span>
+                    EvoChain App
+                </a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-evo-accent hover:text-orange-600 hover:bg-slate-50">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-24 lg:pt-40 lg:pb-32 bg-white relative overflow-hidden">
+        <div class="absolute inset-0" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 40px 40px; opacity: 0.3;"></div>
+        
+        <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-start">
+                
+                <div class="lg:col-span-5 mb-12 lg:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                        Let's Architect Your <span class="text-evo-accent">Supply Chain.</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-10">
+                        Whether you need to unify disparate ERP data, implement ML-driven forecasting, or design a new distribution network, our team is ready to execute. Reach out to schedule a high-level architecture review.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="bg-slate-50 border border-slate-200 p-6 rounded-xl shadow-sm">
+                            <h3 class="text-sm font-bold text-slate-900 mb-2 uppercase tracking-wide flex items-center gap-2">
+                                <span class="material-symbols-rounded text-evo-accent">mail</span>
+                                Direct Inquiry
+                            </h3>
+                            <p class="text-sm text-slate-600 mb-3">Prefer to send an email directly? Copy the address below to get in touch with our consulting team.</p>
+                            <div class="flex items-center gap-3 bg-white border border-slate-300 rounded-md p-3">
+                                <code class="text-slate-800 font-mono text-sm font-semibold flex-1 select-all">contact@evochain.pro</code>
+                                <a href="mailto:contact@evochain.pro" class="shrink-0 bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded text-xs font-semibold transition-colors border border-slate-200">
+                                    Open App
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 p-4 rounded-lg border border-green-200 bg-green-50">
+                            <span class="relative flex h-3 w-3">
+                              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                              <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                            </span>
+                            <p class="text-sm font-medium text-green-800">EvoChain App is fully operational.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7" data-aos="fade-left" data-aos-delay="100">
+                    <div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-8 sm:p-10 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-evo-900 via-evo-800 to-evo-accent"></div>
+                        
+                        <div x-data="{ isSubmitted: false }">
+                            
+                            <form x-show="!isSubmitted" @submit.prevent="isSubmitted = true" class="space-y-6">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="first-name" class="block text-sm font-semibold text-slate-900 mb-2">First Name</label>
+                                        <input type="text" id="first-name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-evo-accent focus:border-evo-accent transition-colors bg-slate-50 focus:bg-white text-slate-900 outline-none">
+                                    </div>
+                                    <div>
+                                        <label for="last-name" class="block text-sm font-semibold text-slate-900 mb-2">Last Name</label>
+                                        <input type="text" id="last-name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-evo-accent focus:border-evo-accent transition-colors bg-slate-50 focus:bg-white text-slate-900 outline-none">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="work-email" class="block text-sm font-semibold text-slate-900 mb-2">Work Email</label>
+                                    <input type="email" id="work-email" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-evo-accent focus:border-evo-accent transition-colors bg-slate-50 focus:bg-white text-slate-900 outline-none">
+                                </div>
+
+                                <div>
+                                    <label for="company" class="block text-sm font-semibold text-slate-900 mb-2">Company</label>
+                                    <input type="text" id="company" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-evo-accent focus:border-evo-accent transition-colors bg-slate-50 focus:bg-white text-slate-900 outline-none">
+                                </div>
+
+                                <div>
+                                    <label for="objective" class="block text-sm font-semibold text-slate-900 mb-2">Primary Objective</label>
+                                    <select id="objective" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-evo-accent focus:border-evo-accent transition-colors bg-slate-50 focus:bg-white text-slate-900 outline-none appearance-none">
+                                        <option value="" disabled selected>Select an area of focus...</option>
+                                        <option value="s-op">S&OP Framework Alignment</option>
+                                        <option value="inventory">Inventory & Cash Flow Optimization</option>
+                                        <option value="forecasting">ML Demand Forecasting</option>
+                                        <option value="network">Network Design & Geo-Spatial Mapping</option>
+                                        <option value="reporting">Advanced Analytics (Power BI)</option>
+                                        <option value="other">Other Inquiry</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="message" class="block text-sm font-semibold text-slate-900 mb-2">Project Details</label>
+                                    <textarea id="message" rows="4" required placeholder="Briefly describe your current supply chain architecture and operational goals." class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-evo-accent focus:border-evo-accent transition-colors bg-slate-50 focus:bg-white text-slate-900 outline-none resize-none"></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full bg-evo-900 text-white font-bold py-4 rounded-lg shadow-md hover:bg-evo-800 hover:shadow-lg transition-all flex justify-center items-center gap-2 group">
+                                    Request Consultation
+                                    <span class="material-symbols-rounded text-lg transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                </button>
+                                <p class="text-xs text-center text-slate-500 mt-4">By submitting this form, you acknowledge our Privacy Policy.</p>
+                            </form>
+
+                            <div x-show="isSubmitted" x-cloak class="py-12 text-center flex flex-col items-center justify-center">
+                                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                                    <span class="material-symbols-rounded text-4xl text-green-600">check_circle</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-slate-900 mb-2">Request Received</h3>
+                                <p class="text-slate-600 max-w-sm mx-auto mb-8">
+                                    Thank you for reaching out. A member of the EvoChain architecture team will review your details and contact you shortly.
+                                </p>
+                                <button @click="isSubmitted = false" class="text-sm font-semibold text-evo-accent hover:text-orange-600 transition-colors">
+                                    Submit another inquiry
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white pt-16 pb-8 border-t border-slate-200">
+        <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <a href="/" class="flex items-center gap-3 mb-4 group w-fit">
+                        <img src="assets/Evochain_logo.png" alt="EvoChain Logo" class="h-7 w-auto object-contain transition-opacity duration-300 group-hover:opacity-70">
+                    </a>
+                    <p class="text-sm text-slate-500 leading-relaxed">
+                        Data-driven supply chain consulting and proprietary planning architecture for the modern enterprise.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-slate-900 font-bold mb-4">Platform</h4>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li><a href="https://app.evochain.pro" target="_blank" class="hover:text-evo-accent transition-colors">EvoChain App</a></li>
+                        <li><a href="#" class="hover:text-evo-accent transition-colors">Methodology</a></li>
+                        <li><a href="#" class="hover:text-evo-accent transition-colors">System Status</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-slate-900 font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li><a href="about.html" class="hover:text-evo-accent transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-evo-accent transition-colors">Contact Us</a></li>
+                        <li><a href="#" target="_blank" class="hover:text-evo-accent transition-colors">LinkedIn</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-slate-900 font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li><a href="#" class="hover:text-evo-accent transition-colors">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-evo-accent transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-evo-accent transition-colors">Cookie Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-slate-500">
+                    &copy; <script>document.write(new Date().getFullYear())</script> EvoChain Consulting. All rights reserved.
+                </p>
+                <div class="flex items-center gap-2 text-xs text-slate-500 font-medium">
+                    <span class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_5px_rgba(34,197,94,0.5)]"></span>
+                    Systems Operational
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 600,
+            easing: 'ease-out-cubic',
+        });
+    </script>
+
+    <div x-data="cookieConsent()" 
+         x-init="checkConsent()" 
+         x-show="showBanner" 
+         x-cloak
+         style="display: none;"
+         x-transition:enter="transition ease-out duration-500"
+         x-transition:enter-start="opacity-0 translate-y-full"
+         x-transition:enter-end="opacity-100 translate-y-0"
+         x-transition:leave="transition ease-in duration-300"
+         x-transition:leave-start="opacity-100 translate-y-0"
+         x-transition:leave-end="opacity-0 translate-y-full"
+         class="fixed bottom-0 left-0 right-0 z-[100] p-4 sm:p-6 md:p-8 flex justify-center pointer-events-none">
+        
+        <div class="bg-evo-900 border border-slate-700 shadow-2xl rounded-xl p-6 sm:p-8 max-w-2xl w-full pointer-events-auto backdrop-blur-md bg-opacity-95 text-slate-300">
+            <div x-show="view === 'main'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
+                <h3 class="text-white font-bold text-xl mb-3">We value your privacy</h3>
+                <p class="text-sm leading-relaxed mb-6">
+                    We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3 justify-end">
+                    <button @click="view = 'customize'" class="px-5 py-2.5 rounded-md text-sm font-semibold text-slate-300 hover:text-white border border-slate-600 hover:bg-slate-800 transition-colors">
+                        Customize
+                    </button>
+                    <button @click="acceptAll()" class="px-5 py-2.5 rounded-md text-sm font-semibold text-evo-900 bg-evo-accent hover:bg-orange-400 transition-colors shadow-lg">
+                        Accept All
+                    </button>
+                </div>
+            </div>
+            <div x-show="view === 'customize'" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
+                <h3 class="text-white font-bold text-xl mb-6 border-b border-slate-700 pb-4">Customize Preferences</h3>
+                <div class="space-y-6 mb-8 max-h-[50vh] overflow-y-auto pr-2 custom-scrollbar">
+                    <div class="flex items-start justify-between gap-4 p-4 rounded-lg bg-slate-800/50 border border-slate-700">
+                        <div class="flex-1">
+                            <h4 class="text-white font-semibold text-sm mb-1">Mandatory</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                These cookies are necessary for the website to function and cannot be switched off in our systems. This includes core site routing and basic telemetry.
+                            </p>
+                        </div>
+                        <div class="flex flex-col items-end gap-1 shrink-0">
+                            <div class="w-11 h-6 bg-evo-accent opacity-70 cursor-not-allowed rounded-full relative">
+                                <div class="absolute top-[2px] right-[2px] bg-white rounded-full h-5 w-5"></div>
+                            </div>
+                            <span class="text-[10px] font-mono text-evo-accent uppercase tracking-wider">Always Active</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start justify-between gap-4 p-4 rounded-lg border border-transparent hover:border-slate-700 transition-colors">
+                        <div class="flex-1">
+                            <h4 class="text-white font-semibold text-sm mb-1">Advertisement</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Advertisement cookies are used to provide visitors with customized advertisements based on the pages you visited previously and to analyze the effectiveness of the ad campaigns.
+                            </p>
+                        </div>
+                        <div class="shrink-0 pt-1">
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" x-model="adConsent" class="sr-only peer">
+                                <div class="w-11 h-6 bg-slate-600 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-evo-accent"></div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 justify-end pt-4 border-t border-slate-700">
+                    <button @click="savePreferences()" class="px-5 py-2.5 rounded-md text-sm font-semibold text-slate-300 hover:text-white border border-slate-600 hover:bg-slate-800 transition-colors">
+                        Save Preferences
+                    </button>
+                    <button @click="acceptAll()" class="px-5 py-2.5 rounded-md text-sm font-semibold text-evo-900 bg-evo-accent hover:bg-orange-400 transition-colors shadow-lg">
+                        Accept All
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #64748b; }
+    </style>
+
+    <script>
+        function cookieConsent() {
+            return {
+                showBanner: false,
+                view: 'main',
+                adConsent: false,
+                checkConsent() {
+                    if (!localStorage.getItem('evochain_consent_state')) {
+                        setTimeout(() => this.showBanner = true, 800);
+                    }
+                },
+                acceptAll() {
+                    localStorage.setItem('evochain_consent_state', 'all_granted');
+                    this.adConsent = true;
+                    this.showBanner = false;
+                    gtag('consent', 'update', { 'analytics_storage': 'granted', 'ad_storage': 'granted' });
+                },
+                savePreferences() {
+                    localStorage.setItem('evochain_consent_state', 'custom_granted');
+                    localStorage.setItem('evochain_ad_consent', this.adConsent);
+                    this.showBanner = false;
+                    gtag('consent', 'update', { 'analytics_storage': 'granted', 'ad_storage': this.adConsent ? 'granted' : 'denied' });
+                }
+            }
+        }
+    </script>
+</body>
+</html>

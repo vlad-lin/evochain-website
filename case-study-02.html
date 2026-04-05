@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study | EvoChain Consulting</title>
+
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QX11J9ZKQB"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { 'analytics_storage': 'denied', 'wait_for_update': 500 });
+    gtag('js', new Date());
+    gtag('config', 'G-QX11J9ZKQB', { 'cookie_domain': 'evochain.pro', 'cookie_flags': 'SameSite=None;Secure' });
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { evo: { 900: '#0f172a', 800: '#1e293b', accent: '#F19E39' } }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="bg-slate-50 text-slate-600 font-sans antialiased overflow-x-hidden" x-data="{ mobileMenuOpen: false }">
+
+    <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all shadow-sm">
+        <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex flex-shrink-0 items-center gap-4 cursor-pointer">
+                    <a href="/" class="flex items-center gap-3 group">
+                        <img src="assets/Evochain_logo.png" alt="EvoChain Logo" class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                    </a>
+                </div>
+
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="about.html" class="text-sm font-medium text-slate-900 hover:text-evo-accent transition-colors">About Us</a>
+                    <a href="https://app.evochain.pro" target="_blank" class="text-sm font-medium text-slate-600 hover:text-evo-accent transition-colors flex items-center gap-2 group">
+                        <span class="material-symbols-rounded text-lg text-slate-400 group-hover:text-evo-accent transition-colors">developer_board</span>
+                        EvoChain App Login
+                    </a>
+                    <a href="mailto:contact@evochain.pro" class="bg-evo-900 text-white px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-evo-800 transition-colors shadow-md">Contact Us</a>
+                </nav>
+
+                <div class="md:hidden flex items-center">
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-slate-600 hover:text-slate-900 focus:outline-none">
+                        <span class="material-symbols-rounded text-3xl" x-text="mobileMenuOpen ? 'close' : 'menu'"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div x-show="mobileMenuOpen" x-transition class="md:hidden bg-white border-b border-slate-200 shadow-lg">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50">About Us</a>
+                <a href="https://app.evochain.pro" target="_blank" class="flex items-center gap-2 px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50">
+                    <span class="material-symbols-rounded text-lg">developer_board</span> EvoChain App
+                </a>
+                <a href="mailto:contact@evochain.pro" class="block px-3 py-2 rounded-md text-base font-medium text-evo-accent hover:text-orange-600 hover:bg-slate-50">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden relative z-20">
+        <div class="max-w-[50rem] mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <a href="/" class="inline-flex items-center gap-1 text-sm font-medium text-slate-500 hover:text-evo-accent transition-colors mb-8" data-aos="fade-right">
+                <span class="material-symbols-rounded text-lg">arrow_back</span>
+                Back to Deployments
+            </a>
+
+            <div data-aos="fade-up">
+                <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center border border-slate-200 mb-6 shadow-sm">
+                    <span class="material-symbols-rounded text-evo-accent">factory</span>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-8">
+                    Tier-1 Supplier uses EvoChain to Integrate ML Baselines and Streamline Multi-Facility Capacity
+                </h1>
+            </div>
+
+            <article class="prose prose-slate prose-lg max-w-none text-slate-600 bg-white p-8 md:p-12 rounded-2xl border border-slate-200 shadow-sm mb-12" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b border-slate-100 pb-4">The Implementation</h2>
+                
+                <p>
+                    As a critical Tier-1 supplier to major global FMCG manufacturers, the client was forced to maintain exceptional agility. However, the disconnect between their commercial sales forecasts and their shop-floor execution led to severe operational friction, resulting in highly volatile production schedules, excessive machine changeovers, and costly unplanned downtime.
+                </p>
+
+                <p>
+                    EvoChain deployed its Capacity & Execution Management architecture to bridge the gap between demand sensing and physical manufacturing:
+                </p>
+
+                <ul class="list-disc pl-5 space-y-2 mt-4 mb-6 text-base">
+                    <li><strong>Algorithm Auto-Selection:</strong> The platform ingested historical data, automatically testing and selecting the optimal algorithm (XGBoost vs. SARIMA) based on ABC/HML segmentation to generate a stable, trusted demand baseline.</li>
+                    <li><strong>Rough-Cut Capacity Planning (RCCP):</strong> Utilizing EvoChain's BOM explosion logic, the dependent demand was instantly translated into shop-floor loads. This allowed management to mathematically evaluate generated production orders against actual machine run-rates and working hours.</li>
+                    <li><strong>Dynamic Load Balancing:</strong> Plant managers gained the ability to virtually adjust shifts per day and working days per week at the facility level, smoothing production peaks before they caused execution bottlenecks.</li>
+                </ul>
+
+                <p>
+                    By aligning high-fidelity forecasting directly with factory capabilities, the client successfully stabilized their production wheel, minimizing reactive firefighting and drastically improving utilization rates.
+                </p>
+            </article>
+
+            <div class="bg-evo-900 rounded-2xl p-8 md:p-10 border border-slate-800 shadow-xl relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                <span class="material-symbols-rounded absolute -top-4 -right-4 text-9xl text-white/5 rotate-12 pointer-events-none">format_quote</span>
+                
+                <blockquote class="relative z-10">
+                    <p class="text-xl md:text-2xl font-medium text-white leading-relaxed mb-6">
+                        "The visibility EvoChain provides is unprecedented for us. By translating abstract forecasts directly into rough-cut capacity loads, we streamlined our entire operation, stripped out unnecessary changeovers, and significantly reduced equipment downtime."
+                    </p>
+                    <footer class="flex items-center gap-4 border-t border-slate-700/50 pt-6 mt-6">
+                        <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center border border-slate-600">
+                            <span class="material-symbols-rounded text-slate-400">person</span>
+                        </div>
+                        <div>
+                            <div class="font-bold text-white">Chief Operating Officer</div>
+                            <div class="text-sm text-evo-accent font-medium">FMCG Tier-1 Supplier</div>
+                        </div>
+                    </footer>
+                </blockquote>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-white pt-16 pb-8 border-t border-slate-200">
+        <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <a href="/" class="flex items-center gap-3 mb-4 group w-fit">
+                        <img src="assets/Evochain_logo.png" alt="EvoChain Logo" class="h-7 w-auto object-contain transition-opacity duration-300 group-hover:opacity-70">
+                    </a>
+                    <p class="text-sm text-slate-500 leading-relaxed">
+                        Data-driven supply chain consulting and proprietary planning architecture for the modern enterprise.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-slate-900 font-bold mb-4">Platform</h4>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li><a href="https://app.evochain.pro" target="_blank" class="hover:text-evo-accent transition-colors">EvoChain App</a></li>
+                        <li><a href="#" class="hover:text-evo-accent transition-colors">Methodology</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-slate-900 font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li><a href="about.html" class="hover:text-evo-accent transition-colors">About Us</a></li>
+                        <li><a href="mailto:contact@evochain.pro" class="hover:text-evo-accent transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-slate-500">
+                    &copy; <script>document.write(new Date().getFullYear())</script> EvoChain Consulting. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50, duration: 600, easing: 'ease-out-cubic' });
+    </script>
+</body>
+</html>
