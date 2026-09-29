@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | EvoChain Consulting</title>
+    <title>Contact Us | EvoChain</title>
 
     <link rel="icon" type="image/png" href="assets/logo.png">
     <link rel="apple-touch-icon" href="assets/logo.png">
@@ -71,7 +71,7 @@
                     </a>
                     <a href="https://app.evochain.pro" target="_blank" class="text-sm font-medium text-slate-600 hover:text-evo-accent transition-colors flex items-center gap-2 group">
                         <span class="material-symbols-rounded text-lg text-slate-400 group-hover:text-evo-accent transition-colors">developer_board</span>
-                        EvoChain App Login
+                        Sign Up for Free / Log In
                     </a>
                     <a href="contact.html" class="bg-evo-900 text-white px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-evo-800 transition-colors shadow-md">
                         Contact Us
@@ -94,7 +94,7 @@
                 <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50">About Us</a>
                 <a href="https://app.evochain.pro" target="_blank" class="flex items-center gap-2 px-3 py-2 rounded-md text-base font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50">
                     <span class="material-symbols-rounded text-lg">developer_board</span>
-                    EvoChain App
+                    Sign Up for Free / Log In
                 </a>
                 <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-evo-accent hover:text-orange-600 hover:bg-slate-50">Contact Us</a>
             </div>
@@ -109,10 +109,10 @@
                 
                 <div class="lg:col-span-5 mb-12 lg:mb-0" data-aos="fade-right">
                     <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
-                        Let's Architect Your <span class="text-evo-accent">Supply Chain.</span>
+                        Let's Talk About Your <span class="text-evo-accent">Supply Chain.</span>
                     </h1>
                     <p class="text-lg text-slate-600 leading-relaxed mb-10">
-                        Whether you need to unify disparate ERP data, implement ML-driven forecasting, or design a new distribution network, our team is ready to execute. Reach out to schedule a high-level architecture review.
+                        Have a question about EvoChain, need help getting started, or want to check whether your business is eligible for a free account? Send us a message and we'll get back to you.
                     </p>
 
                     <div class="space-y-6">
@@ -121,11 +121,11 @@
                                 <span class="material-symbols-rounded text-evo-accent">mail</span>
                                 Direct Inquiry
                             </h3>
-                            <p class="text-sm text-slate-600 mb-3">Prefer to send an email directly? Copy the address below to get in touch with our consulting team.</p>
+                            <p class="text-sm text-slate-600 mb-3">Prefer to send an email directly? Copy the address below to get in touch with the EvoChain team.</p>
                             <div class="flex items-center gap-3 bg-white border border-slate-300 rounded-md p-3">
                                 <code class="text-slate-800 font-mono text-sm font-semibold flex-1 select-all">contact@evochain.pro</code>
                                 <a href="mailto:contact@evochain.pro" class="shrink-0 bg-slate-100 hover:bg-slate-200 text-slate-600 px-3 py-1.5 rounded text-xs font-semibold transition-colors border border-slate-200">
-                                    Open App
+                                    Send Email
                                 </a>
                             </div>
                         </div>
@@ -144,34 +144,38 @@
                     <div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-8 sm:p-10 relative overflow-hidden">
                         <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-evo-900 via-evo-800 to-evo-accent"></div>
                         
-                        <div x-data="{ isSubmitted: false }">
-                            
-                            <form x-show="!isSubmitted" @submit.prevent="isSubmitted = true" class="space-y-6">
+                        <div x-data="contactForm()">
+
+                            <form x-show="!isSubmitted" @submit.prevent="submit($el)" class="space-y-6">
+                                <input type="hidden" name="_subject" value="New message from the evochain.pro contact form">
+                                <input type="hidden" name="_template" value="table">
+                                <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     <div>
                                         <label for="first-name" class="block text-sm font-semibold text-slate-900 mb-2">First Name</label>
-                                        <input type="text" id="first-name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-evo-accent focus:border-evo-accent transition-colors bg-slate-50 focus:bg-white text-slate-900 outline-none">
+                                        <input type="text" id="first-name" name="First name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-evo-accent focus:border-evo-accent transition-colors bg-slate-50 focus:bg-white text-slate-900 outline-none">
                                     </div>
                                     <div>
                                         <label for="last-name" class="block text-sm font-semibold text-slate-900 mb-2">Last Name</label>
-                                        <input type="text" id="last-name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-evo-accent focus:border-evo-accent transition-colors bg-slate-50 focus:bg-white text-slate-900 outline-none">
+                                        <input type="text" id="last-name" name="Last name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-evo-accent focus:border-evo-accent transition-colors bg-slate-50 focus:bg-white text-slate-900 outline-none">
                                     </div>
                                 </div>
 
                                 <div>
                                     <label for="work-email" class="block text-sm font-semibold text-slate-900 mb-2">Work Email</label>
-                                    <input type="email" id="work-email" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-evo-accent focus:border-evo-accent transition-colors bg-slate-50 focus:bg-white text-slate-900 outline-none">
+                                    <input type="email" id="work-email" name="email" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-evo-accent focus:border-evo-accent transition-colors bg-slate-50 focus:bg-white text-slate-900 outline-none">
                                 </div>
 
                                 <div>
                                     <label for="company" class="block text-sm font-semibold text-slate-900 mb-2">Company</label>
-                                    <input type="text" id="company" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-evo-accent focus:border-evo-accent transition-colors bg-slate-50 focus:bg-white text-slate-900 outline-none">
+                                    <input type="text" id="company" name="Company" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-evo-accent focus:border-evo-accent transition-colors bg-slate-50 focus:bg-white text-slate-900 outline-none">
                                 </div>
 
                                 <div>
                                     <label for="objective" class="block text-sm font-semibold text-slate-900 mb-2">Primary Objective</label>
-                                    <select id="objective" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-evo-accent focus:border-evo-accent transition-colors bg-slate-50 focus:bg-white text-slate-900 outline-none appearance-none">
+                                    <select id="objective" name="Topic" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-evo-accent focus:border-evo-accent transition-colors bg-slate-50 focus:bg-white text-slate-900 outline-none appearance-none">
                                         <option value="" disabled selected>Select an area of focus...</option>
+                                        <option value="account">Account & Eligibility</option>
                                         <option value="s-op">S&OP Framework Alignment</option>
                                         <option value="inventory">Inventory & Cash Flow Optimization</option>
                                         <option value="forecasting">ML Demand Forecasting</option>
@@ -182,14 +186,18 @@
                                 </div>
 
                                 <div>
-                                    <label for="message" class="block text-sm font-semibold text-slate-900 mb-2">Project Details</label>
-                                    <textarea id="message" rows="4" required placeholder="Briefly describe your current supply chain architecture and operational goals." class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-evo-accent focus:border-evo-accent transition-colors bg-slate-50 focus:bg-white text-slate-900 outline-none resize-none"></textarea>
+                                    <label for="message" class="block text-sm font-semibold text-slate-900 mb-2">Message</label>
+                                    <textarea id="message" name="Message" rows="4" required placeholder="Tell us a little about your business and how we can help." class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-evo-accent focus:border-evo-accent transition-colors bg-slate-50 focus:bg-white text-slate-900 outline-none resize-none"></textarea>
                                 </div>
 
-                                <button type="submit" class="w-full bg-evo-900 text-white font-bold py-4 rounded-lg shadow-md hover:bg-evo-800 hover:shadow-lg transition-all flex justify-center items-center gap-2 group">
-                                    Request Consultation
+                                <button type="submit" :disabled="sending" class="w-full bg-evo-900 text-white font-bold py-4 rounded-lg shadow-md hover:bg-evo-800 hover:shadow-lg transition-all flex justify-center items-center gap-2 group disabled:opacity-60 disabled:cursor-wait">
+                                    <span x-text="sending ? 'Sending…' : 'Send Message'">Send Message</span>
                                     <span class="material-symbols-rounded text-lg transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
                                 </button>
+                                <p x-show="error" x-cloak class="text-sm text-center text-red-600">
+                                    Sorry, your message couldn't be sent. Please email us directly at
+                                    <a href="mailto:contact@evochain.pro" class="font-semibold underline">contact@evochain.pro</a>.
+                                </p>
                                 <p class="text-xs text-center text-slate-500 mt-4">By submitting this form, you acknowledge our Privacy Policy.</p>
                             </form>
 
@@ -199,7 +207,7 @@
                                 </div>
                                 <h3 class="text-2xl font-bold text-slate-900 mb-2">Request Received</h3>
                                 <p class="text-slate-600 max-w-sm mx-auto mb-8">
-                                    Thank you for reaching out. A member of the EvoChain architecture team will review your details and contact you shortly.
+                                    Thank you for reaching out. A member of the EvoChain team will get back to you shortly.
                                 </p>
                                 <button @click="isSubmitted = false" class="text-sm font-semibold text-evo-accent hover:text-orange-600 transition-colors">
                                     Submit another inquiry
@@ -221,7 +229,7 @@
                         <img src="assets/Evochain_logo.png" alt="EvoChain Logo" class="h-7 w-auto object-contain transition-opacity duration-300 group-hover:opacity-70">
                     </a>
                     <p class="text-sm text-slate-500 leading-relaxed">
-                        Data-driven supply chain consulting and proprietary planning architecture for the modern enterprise.
+                        Free, non-commercial supply chain planning software for small and medium-sized businesses.
                     </p>
                 </div>
 
@@ -229,8 +237,7 @@
                     <h4 class="text-slate-900 font-bold mb-4">Platform</h4>
                     <ul class="space-y-2 text-sm text-slate-600">
                         <li><a href="https://app.evochain.pro" target="_blank" class="hover:text-evo-accent transition-colors">EvoChain App</a></li>
-                        <li><a href="#" class="hover:text-evo-accent transition-colors">Methodology</a></li>
-                        <li><a href="#" class="hover:text-evo-accent transition-colors">System Status</a></li>
+                        <li><a href="faq.html" class="hover:text-evo-accent transition-colors">Frequently Asked Questions</a></li>
                     </ul>
                 </div>
 
@@ -239,23 +246,23 @@
                     <ul class="space-y-2 text-sm text-slate-600">
                         <li><a href="about.html" class="hover:text-evo-accent transition-colors">About Us</a></li>
                         <li><a href="contact.html" class="hover:text-evo-accent transition-colors">Contact Us</a></li>
-                        <li><a href="#" target="_blank" class="hover:text-evo-accent transition-colors">LinkedIn</a></li>
+                        <li><a href="https://www.linkedin.com/company/evo-chain" target="_blank" class="hover:text-evo-accent transition-colors">LinkedIn</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-slate-900 font-bold mb-4">Legal</h4>
                     <ul class="space-y-2 text-sm text-slate-600">
-                        <li><a href="#" class="hover:text-evo-accent transition-colors">Terms of Use</a></li>
-                        <li><a href="#" class="hover:text-evo-accent transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-evo-accent transition-colors">Cookie Settings</a></li>
+                        <li><a href="terms.html" class="hover:text-evo-accent transition-colors">Terms of Use</a></li>
+                        <li><a href="privacy.html" class="hover:text-evo-accent transition-colors">Privacy Policy</a></li>
+                        <li><a href="privacy.html#cookies" class="hover:text-evo-accent transition-colors">Cookie Policy</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-xs text-slate-500">
-                    &copy; <script>document.write(new Date().getFullYear())</script> EvoChain Consulting. All rights reserved.
+                    &copy; <script>document.write(new Date().getFullYear())</script> EvoChain. All rights reserved.
                 </p>
                 <div class="flex items-center gap-2 text-xs text-slate-500 font-medium">
                     <span class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_5px_rgba(34,197,94,0.5)]"></span>
@@ -353,6 +360,36 @@
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #64748b; }
     </style>
+
+    <script>
+        // Contact form: forwards submissions to contact@evochain.pro via FormSubmit (formsubmit.co)
+        function contactForm() {
+            return {
+                isSubmitted: false,
+                sending: false,
+                error: false,
+                async submit(form) {
+                    this.sending = true;
+                    this.error = false;
+                    try {
+                        const res = await fetch('https://formsubmit.co/ajax/contact@evochain.pro', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                            body: JSON.stringify(Object.fromEntries(new FormData(form)))
+                        });
+                        const data = await res.json();
+                        if (!res.ok || String(data.success) !== 'true') throw new Error(data.message);
+                        form.reset();
+                        this.isSubmitted = true;
+                    } catch (e) {
+                        this.error = true;
+                    } finally {
+                        this.sending = false;
+                    }
+                }
+            }
+        }
+    </script>
 
     <script>
         function cookieConsent() {
